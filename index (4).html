@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="인간과 사회생활, 민주주의와 시민, 정치 과정과 시민 참여 사회 시험 대비 필기노트">
+<title>사회 시험 대비 필기노트</title>
+<style>
+:root{
+  --bg:#f5f7fb;--surface:#fff;--surface2:#eef2f8;--text:#182235;--muted:#647189;
+  --line:#dce3ee;--primary:#3157c8;--primary-soft:#e9efff;--green:#16845b;
+  --green-soft:#e6f6ef;--orange:#a95b12;--orange-soft:#fff2e3;--shadow:0 8px 28px rgba(27,43,75,.07);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;line-height:1.72}
+a{color:inherit}
+button,input{font:inherit}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1440px;margin:auto;padding:12px 22px;display:flex;align-items:center;gap:16px}
+.brand{font-weight:850;letter-spacing:-.04em;white-space:nowrap}
+.brand span{color:var(--primary)}
+.search{flex:1;max-width:520px;position:relative;margin-left:auto}
+.search input{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px 14px 10px 38px;background:var(--surface2);outline:none}
+.search input:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-soft)}
+.search:before{content:"⌕";position:absolute;left:13px;top:3px;font-size:23px;color:var(--muted)}
+.toolbtn{border:1px solid var(--line);background:var(--surface);border-radius:11px;padding:9px 12px;cursor:pointer;color:var(--text)}
+.layout{max-width:1440px;margin:28px auto;padding:0 22px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:26px}
+.sidebar{position:sticky;top:82px;align-self:start;max-height:calc(100vh - 104px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.side-title{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.08em;margin:0 0 12px}
+.nav a{display:block;text-decoration:none;padding:8px 10px;border-radius:9px;color:var(--muted);font-size:14px}
+.nav a:hover,.nav a.active{background:var(--primary-soft);color:var(--primary);font-weight:750}
+.nav .sub{padding-left:22px;font-size:13px}
+main{min-width:0}
+.hero{background:linear-gradient(130deg,#1f3f9c,#4774e6);color:#fff;border-radius:24px;padding:34px 36px;box-shadow:var(--shadow);margin-bottom:22px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;opacity:.8}
+.hero h1{font-size:clamp(27px,4vw,42px);line-height:1.2;letter-spacing:-.045em;margin:9px 0 12px}
+.hero p{margin:0;max-width:760px;color:#e8edff}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.pill{display:inline-flex;align-items:center;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:750;background:rgba(255,255,255,.16);color:#fff}
+.notice{background:var(--orange-soft);border:1px solid #f1d7b7;color:#70400f;border-radius:14px;padding:14px 16px;margin:0 0 22px;font-size:14px}
+.unit{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin:0 0 22px;box-shadow:var(--shadow)}
+.unit-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+.unit-num{flex:none;width:42px;height:42px;border-radius:13px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-weight:900}
+h2{font-size:25px;letter-spacing:-.035em;margin:0 0 4px;line-height:1.3}
+.unit-sub{color:var(--muted);font-size:13px}
+h3{font-size:19px;letter-spacing:-.025em;margin:28px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+h4{font-size:15px;margin:18px 0 7px}
+p{margin:8px 0}
+ul,ol{padding-left:22px;margin:8px 0}
+li{margin:4px 0}
+.definition{border-left:4px solid var(--primary);background:var(--primary-soft);padding:13px 16px;border-radius:0 12px 12px 0;margin:10px 0 14px}
+.definition b{color:#2446ad}
+.callout{border:1px solid #c9e8d9;background:var(--green-soft);border-radius:12px;padding:12px 15px;margin:13px 0;font-size:14px}
+.warning{border:1px solid #f0d7b6;background:var(--orange-soft);border-radius:12px;padding:12px 15px;margin:13px 0;font-size:14px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.mini{background:var(--surface2);border:1px solid var(--line);border-radius:13px;padding:14px}
+.mini strong{display:block;margin-bottom:5px}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:12px 0 16px;font-size:14px;overflow:hidden;border:1px solid var(--line);border-radius:12px}
+th,td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+th:last-child,td:last-child{border-right:0}
+tr:last-child td{border-bottom:0}
+th{background:var(--surface2);font-weight:800}
+tbody tr:last-child th{border-bottom:0}
+.tag{display:inline-block;font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px;background:var(--primary-soft);color:var(--primary);margin-right:5px}
+.flow{display:flex;flex-direction:column;align-items:stretch;gap:6px;max-width:620px;margin:14px auto}
+.flow-step{background:var(--primary-soft);border:1px solid #d5defc;color:#233e91;border-radius:12px;padding:12px;text-align:center;font-weight:800}
+.flow-arrow{text-align:center;color:var(--muted);line-height:1}
+details{border:1px solid var(--line);border-radius:12px;margin:10px 0;background:var(--surface)}
+summary{cursor:pointer;padding:12px 15px;font-weight:800}
+details .inside{padding:0 15px 14px;color:var(--muted);font-size:14px}
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.compare>div{border:1px solid var(--line);border-radius:12px;padding:14px}
+.compare h4{margin:0 0 7px;color:var(--primary)}
+.quiz{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:17px;margin:12px 0}
+.quiz label{display:block;padding:6px 0;cursor:pointer}
+.quiz button{margin-top:10px;background:var(--primary);color:white;border:0;border-radius:9px;padding:9px 14px;cursor:pointer}
+.result{font-weight:750;margin-top:8px}
+.footer{text-align:center;color:var(--muted);font-size:12px;padding:22px}
+.hidden{display:none!important}
+mark{background:#ffef9e;color:inherit;border-radius:3px;padding:0 2px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static;max-height:none}.nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}.nav .sub{display:none}}
+@media(max-width:600px){.topbar-inner{padding:10px 13px;gap:8px}.brand{font-size:14px}.toolbtn{padding:8px}.layout{padding:0 12px;margin:14px auto}.hero{padding:25px 21px;border-radius:18px}.unit{padding:19px 16px}.grid2,.compare{grid-template-columns:1fr}.nav{grid-template-columns:1fr 1fr}table{font-size:12px}th,td{padding:8px 7px}}
+body.dark{--bg:#101725;--surface:#182235;--surface2:#202d43;--text:#e8eef9;--muted:#a4b1c7;--line:#30405a;--primary:#91aaff;--primary-soft:#26365d;--green-soft:#173b32;--orange-soft:#42321f;--shadow:0 8px 28px rgba(0,0,0,.2)}
+body.dark .topbar{background:rgba(24,34,53,.92)}
+body.dark .notice,body.dark .warning{color:#f2d3a8}
+body.dark .callout{color:#bdebd5}
+body.dark .flow-step{color:#dbe4ff}
+body.dark .hero{background:linear-gradient(130deg,#233b7c,#3557aa)}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">SOCIAL <span>STUDY NOTE</span></div>
+    <div class="search"><input id="searchInput" type="search" placeholder="개념 검색 (예: 국민 주권, 주민 소환)" aria-label="노트 검색"></div>
+    <button class="toolbtn" id="themeBtn" type="button" aria-label="화면 테마 전환">☾</button>
+    <button class="toolbtn" onclick="window.print()" type="button">인쇄</button>
+  </div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+  <p class="side-title">목차 · TABLE OF CONTENTS</p>
+  <nav class="nav" id="toc">
+    <a href="#start">노트 사용 안내</a>
+    <a href="#unit1">Ⅰ. 인간과 사회생활</a>
+    <a class="sub" href="#socialization">1. 사회화와 자아 정체성</a>
+    <a class="sub" href="#status">2. 사회적 지위와 역할</a>
+    <a class="sub" href="#conflict">3. 갈등과 차별</a>
+    <a href="#unit2">Ⅱ. 민주주의와 시민</a>
+    <a class="sub" href="#politics">1. 정치와 민주주의</a>
+    <a class="sub" href="#history">2. 민주주의 발전</a>
+    <a class="sub" href="#ideals">3. 민주주의 이념</a>
+    <a class="sub" href="#principles">4. 민주 정치의 원리</a>
+    <a class="sub" href="#modern">5. 현대 민주주의</a>
+    <a href="#unit3">Ⅲ. 정치 과정과 시민 참여</a>
+    <a class="sub" href="#election">1. 선거와 정치 참여</a>
+    <a class="sub" href="#actors">2. 정치 주체와 정치 과정</a>
+    <a class="sub" href="#local">3. 지방 자치와 시민 참여</a>
+    <a href="#review">Ⅳ. 시험 직전 비교 암기</a>
+    <a href="#check">Ⅴ. 정확도 점검</a>
+    <a href="#practice">Ⅵ. 확인 문제</a>
+  </nav>
+</aside>
+<main>
+<section class="hero" id="start">
+  <div class="eyebrow">SOCIAL STUDIES · EXAM NOTES</div>
+  <h1>사회 시험 대비<br>통합 필기노트</h1>
+  <p>개념의 정의부터 종류·특징·역할·비교까지 한눈에 정리한 학습용 노트입니다.</p>
+  <div class="meta"><span class="pill">범위: p.128~143</span><span class="pill">범위: p.164~199</span><span class="pill">단일 HTML · GitHub Pages 지원</span></div>
+</section>
+<div class="notice"><b>자료 범위 안내</b><br>이 문서는 앞서 대화에서 작성한 예비 요약을 바탕으로 재구성하고 일반적인 사회 교과 개념을 점검한 자료입니다. 교과서 원문 전체를 직접 대조한 최종본은 아니므로, 교과서 고유의 사례·용어·세부 항목은 원본 확인 후 보완해야 합니다.</div>
+
+<section class="unit" id="unit1">
+<div class="unit-head"><div class="unit-num">Ⅰ</div><div><h2>인간과 사회생활</h2><div class="unit-sub">사회화 · 자아 정체성 · 지위와 역할 · 사회적 갈등</div></div></div>
+<section id="socialization">
+<h3>1. 사회화와 자아 정체성</h3>
+<div class="definition"><b>사회화</b>란 인간이 사회생활에 필요한 지식, 기능, 가치, 규범 등을 학습하며 사회 구성원으로 성장하는 과정이다.</div>
+<h4>① 사회화의 특징</h4>
+<ul><li>출생 이후 죽을 때까지 평생에 걸쳐 이루어진다.</li><li>사회와 시대에 따라 사회화의 내용과 방식이 달라질 수 있다.</li><li>다른 사람과의 상호 작용을 통해 사회 구성원으로 성장하도록 돕는다.</li><li>자아 정체성 형성에 영향을 준다.</li></ul>
+<h4>② 사회화의 유형</h4>
+<table><thead><tr><th>구분</th><th>의미</th><th>예시</th></tr></thead><tbody>
+<tr><td><b>1차적 사회화</b></td><td>어린 시기에 기초적인 언어·생활 습관·가치 등을 배우는 과정</td><td>가정에서 언어와 기본 예절 배우기</td></tr>
+<tr><td><b>2차적 사회화</b></td><td>성장하면서 다양한 사회생활에 필요한 지식과 기능을 배우는 과정</td><td>학교에서 교과 지식과 사회 규칙 배우기</td></tr>
+<tr><td><b>재사회화</b></td><td>새로운 환경이나 지위에 적응하기 위해 기존의 지식·기능·생활양식을 새롭게 학습하는 과정</td><td>새 직장이나 군대의 생활 방식 익히기</td></tr>
+</tbody></table>
+<h4>③ 사회화 기관의 구분</h4>
+<table><thead><tr><th>구분</th><th>설명</th><th>대표 사례</th></tr></thead><tbody>
+<tr><td>1차적 사회화 기관</td><td>친밀한 관계를 바탕으로 기초적인 사회화에 큰 영향을 줌</td><td>가족</td></tr>
+<tr><td>2차적 사회화 기관</td><td>보다 전문적·체계적인 사회화를 담당</td><td>학교, 직장</td></tr>
+<tr><td>공식적 사회화 기관</td><td>사회화를 목적으로 명확한 교육·훈련 활동을 수행</td><td>학교, 교육 기관</td></tr>
+<tr><td>비공식적 사회화 기관</td><td>사회화가 주된 목적은 아니지만 사회화에 영향을 줌</td><td>가족, 친구, 대중 매체 등</td></tr>
+</tbody></table>
+<div class="warning"><b>구분 주의</b><br>‘1차적/2차적’은 사회화의 관계·내용상 구분이고, ‘공식적/비공식적’은 사회화가 기관의 주된 목적·활동인지에 따른 구분이다. 서로 다른 기준이므로 한 기관을 두 기준으로 함께 분류할 수 있다.</div>
+<h4>④ 자아 정체성</h4>
+<div class="definition"><b>자아 정체성</b>은 자신이 누구인지, 어떤 가치와 목표를 지닌 사람인지에 대한 비교적 일관된 인식이다.</div>
+<p>사회화 과정에서 타인과 상호 작용하고 자신을 돌아보며 형성·발전한다.</p>
+</section>
+<section id="status">
+<h3>2. 사회적 지위와 역할</h3>
+<h4>① 사회적 지위</h4>
+<div class="definition"><b>사회적 지위</b>란 개인이 사회나 집단에서 차지하는 위치를 말한다.</div>
+<div class="grid2">
+<div class="mini"><strong>귀속 지위</strong>태어나면서 또는 개인의 의지와 무관하게 주어지는 지위<br><small>예: 자녀, 형제자매 등</small></div>
+<div class="mini"><strong>성취 지위</strong>개인의 노력·선택·능력 등을 통해 얻게 되는 지위<br><small>예: 의사, 교사, 학생회장 등</small></div>
+</div>
+<h4>② 사회적 역할과 역할 행동</h4>
+<ul><li><b>사회적 역할:</b> 특정 지위에 있는 사람에게 사회적으로 기대되는 행동 방식</li><li><b>역할 행동:</b> 개인이 기대되는 역할을 실제로 수행하는 구체적인 행동</li></ul>
+<table><thead><tr><th>개념</th><th>예시</th></tr></thead><tbody><tr><td>지위</td><td>학생</td></tr><tr><td>역할</td><td>수업에 참여하고 학습하며 학교 규칙을 지킬 것으로 기대됨</td></tr><tr><td>역할 행동</td><td>실제로 수업에 참여하고 과제를 수행함</td></tr></tbody></table>
+<h4>③ 역할 갈등</h4>
+<div class="definition"><b>역할 갈등</b>은 한 사람이 둘 이상의 지위에 따른 역할을 동시에 수행해야 하는 상황 등에서 역할들이 충돌하여 어느 하나를 선택하기 어려운 상태를 말한다.</div>
+<p>예: 시험공부를 해야 하는 학생의 역할과 가족 행사에 참석해야 하는 가족 구성원의 역할이 충돌하는 경우.</p>
+<div class="callout"><b>해결 방법:</b> 역할의 중요성과 상황을 고려해 우선순위를 정하고, 관련된 사람과 협의하며 시간·역할을 조정한다.</div>
+</section>
+<section id="conflict">
+<h3>3. 사회적 갈등과 차별</h3>
+<h4>① 사회적 갈등</h4>
+<div class="definition"><b>사회적 갈등</b>은 개인이나 집단 사이에 이해관계·가치관·목표 등이 달라 대립하는 현상이다.</div>
+<ul><li>경제적 이해관계의 차이</li><li>가치관·신념·정치적 의견의 차이</li><li>세대·지역·집단 간 이해관계의 차이</li></ul>
+<h4>② 편견과 차별</h4>
+<table><thead><tr><th>개념</th><th>의미</th><th>예시</th></tr></thead><tbody>
+<tr><td><b>편견</b></td><td>충분한 근거 없이 특정 대상이나 집단에 대해 갖는 치우친 생각·태도</td><td>어떤 지역 출신이라는 이유만으로 성격을 단정함</td></tr>
+<tr><td><b>차별</b></td><td>합리적 이유 없이 특정 개인이나 집단을 다르게 대우하여 불이익을 주는 것</td><td>출신 지역만을 이유로 채용에서 배제함</td></tr>
+</tbody></table>
+<h4>③ 갈등의 민주적 해결</h4>
+<ul><li>대화와 토론을 통한 의견 교환</li><li>상대방의 입장과 권리 존중</li><li>타협과 양보를 통한 합의</li><li>법과 제도에 따른 공정한 해결</li><li>시민의 관심과 참여</li></ul>
+<div class="callout"><b>핵심:</b> 갈등을 무조건 없애는 것보다 서로 다른 의견을 민주적 절차에 따라 조정하고 해결하는 것이 중요하다.</div>
+</section>
+</section>
+
+<section class="unit" id="unit2">
+<div class="unit-head"><div class="unit-num">Ⅱ</div><div><h2>민주주의와 시민</h2><div class="unit-sub">정치의 의미 · 민주주의 발전 · 민주주의 이념과 원리</div></div></div>
+<section id="politics">
+<h3>1. 정치와 민주주의</h3>
+<h4>① 정치의 의미</h4>
+<div class="definition"><b>정치</b>는 사회 구성원 사이의 다양한 이해관계와 갈등을 조정하고 공동체의 문제를 해결하기 위해 공동의 의사를 형성하고 결정하는 활동이다.</div>
+<h4>② 정치의 기능</h4>
+<ul><li>사회적 갈등과 이해관계 조정</li><li>공동체의 의사 결정</li><li>사회 질서 유지</li><li>공동의 문제 해결과 사회 발전</li></ul>
+<h4>③ 민주주의의 의미와 필요성</h4>
+<div class="definition"><b>민주주의</b>는 국민이 국가의 주인이며, 국민의 의사에 따라 국가를 운영해야 한다는 정치 원리이다.</div>
+<ul><li>국민의 자유와 권리 보장</li><li>국민의 의사를 정치에 반영</li><li>권력의 남용 방지</li><li>갈등을 평화적·민주적으로 해결</li></ul>
+</section>
+<section id="history">
+<h3>2. 민주주의의 발전 과정</h3>
+<table><thead><tr><th>시기</th><th>주요 특징</th><th>한계·의의</th></tr></thead><tbody>
+<tr><td><b>고대 아테네</b></td><td>시민이 민회 등에 참여하는 직접 민주 정치</td><td>여성·노예·외국인 등은 시민권과 정치 참여에서 배제됨</td></tr>
+<tr><td><b>근대 민주 정치</b></td><td>시민 혁명 등을 거치며 자유·평등·국민 주권·기본권 강조, 대의 민주 정치 발달</td><td>초기에는 재산·성별 등에 따른 선거권 제한이 존재함</td></tr>
+<tr><td><b>현대 민주 정치</b></td><td>보통 선거권 확대, 여성 참정권 인정, 다양한 시민 참여와 사회권·실질적 평등 강조</td><td>정치적 무관심, 불평등, 소수자 권리 등 해결 과제가 남아 있음</td></tr>
+</tbody></table>
+<div class="callout"><b>흐름 암기:</b> 고대 아테네의 제한적 직접 민주 정치 → 근대 시민 혁명과 자유·평등의 확산 → 현대의 보통 선거권 확대와 참여 민주주의 발전.</div>
+</section>
+<section id="ideals">
+<h3>3. 민주주의의 기본 이념</h3>
+<div class="grid2">
+<div class="mini"><strong>인간의 존엄성</strong>모든 인간은 그 자체로 존엄하며 존중받아야 한다.</div>
+<div class="mini"><strong>자유</strong>타인의 권리를 침해하지 않는 범위에서 부당한 간섭 없이 생각하고 행동할 수 있어야 한다.</div>
+<div class="mini"><strong>평등</strong>모든 사람은 인간으로서 동등한 가치를 지니며 합리적 이유 없이 차별받지 않아야 한다.</div>
+<div class="mini"><strong>복지·사회적 평등</strong>사회 구성원이 인간다운 생활을 할 수 있도록 실질적인 조건을 마련하는 문제와 연결된다.</div>
+</div>
+<h4>형식적 평등과 실질적 평등</h4>
+<table><thead><tr><th>구분</th><th>의미</th><th>설명 예시</th></tr></thead><tbody>
+<tr><td>형식적 평등</td><td>법과 제도상 모든 사람을 동일한 기준으로 대우</td><td>동일한 자격 기준을 적용</td></tr>
+<tr><td>실질적 평등</td><td>개인의 처지와 조건의 차이를 고려하여 실질적으로 평등한 기회·조건을 보장</td><td>장애 학생에게 정당한 편의를 제공</td></tr>
+</tbody></table>
+</section>
+<section id="principles">
+<h3>4. 민주 정치의 기본 원리</h3>
+<table><thead><tr><th>원리</th><th>뜻</th><th>핵심어</th></tr></thead><tbody>
+<tr><td><b>국민 주권</b></td><td>국가의 주권이 국민에게 있음</td><td>주권의 주인</td></tr>
+<tr><td><b>국민 자치</b></td><td>국민이 정치에 참여하여 스스로 다스림</td><td>국민의 참여·자기 지배</td></tr>
+<tr><td><b>권력 분립</b></td><td>국가 권력을 나누어 서로 견제하고 균형을 이루게 함</td><td>권력 남용 방지</td></tr>
+<tr><td><b>입헌주의</b></td><td>헌법에 따라 국가 권력을 구성·행사하고 헌법으로 권력을 제한함</td><td>헌법에 의한 통치</td></tr>
+<tr><td><b>법치주의</b></td><td>국가 권력의 행사와 국민 생활이 법에 근거하고 법에 따라 이루어져야 함</td><td>법에 의한 통치</td></tr>
+<tr><td><b>기본권 보장</b></td><td>국가가 국민의 기본적인 권리와 자유를 보장함</td><td>국민의 권리</td></tr>
+</tbody></table>
+<div class="warning"><b>구분 주의</b><br>입헌주의와 법치주의는 서로 밀접하지만 같은 표현은 아니다. 입헌주의는 특히 헌법으로 국가 권력을 제한하는 원리를 강조하고, 법치주의는 국가 권력이 법에 근거하여 행사되어야 한다는 원리를 강조한다.</div>
+</section>
+<section id="modern">
+<h3>5. 현대 민주주의의 특징과 과제</h3>
+<h4>① 대의 민주주의</h4>
+<div class="definition"><b>대의 민주주의</b>는 국민이 선거 등을 통해 대표자를 선출하고, 대표자가 국민을 대신해 정치적 의사 결정에 참여하는 제도이다.</div>
+<div class="compare">
+<div><h4>장점</h4><ul><li>많은 국민이 직접 모이지 않아도 국가 운영 가능</li><li>대표자를 통한 지속적·전문적 의사 결정 가능</li></ul></div>
+<div><h4>한계</h4><ul><li>대표자가 국민의 의사를 충분히 반영하지 않을 수 있음</li><li>정치적 무관심과 대표성 부족 문제가 발생할 수 있음</li></ul></div>
+</div>
+<h4>② 현대 민주주의의 과제</h4>
+<ul><li>정치적 무관심을 줄이고 시민 참여 확대</li><li>정치적 양극화와 갈등을 민주적으로 조정</li><li>사회적 약자와 소수자의 권리 보호</li><li>정확한 정보에 기초한 토론과 숙의 문화 형성</li><li>정치 대표성과 책임성 강화</li></ul>
+</section>
+</section>
+
+<section class="unit" id="unit3">
+<div class="unit-head"><div class="unit-num">Ⅲ</div><div><h2>정치 과정과 시민 참여</h2><div class="unit-sub">선거 · 정치 주체 · 정책 과정 · 지방 자치</div></div></div>
+<section id="election">
+<h3>1. 선거와 정치 참여</h3>
+<h4>① 선거의 의미와 기능</h4>
+<div class="definition"><b>선거</b>는 국민이 대표자를 선택하는 절차로, 국민의 정치적 의사를 정치에 반영하는 대표적인 방법이다.</div>
+<ul><li>대표자 선출</li><li>국민의 정치적 의사 반영</li><li>대표자와 정당의 정책·활동 평가</li><li>정치 권력에 민주적 정당성 부여</li><li>평화적인 정권 교체 가능</li></ul>
+<h4>② 민주 선거의 기본 원칙</h4>
+<table><thead><tr><th>원칙</th><th>의미</th><th>암기</th></tr></thead><tbody>
+<tr><td><b>보통 선거</b></td><td>일정한 연령 등 법률이 정한 요건을 충족한 국민에게 원칙적으로 선거권을 보장</td><td>선거권의 보편성</td></tr>
+<tr><td><b>평등 선거</b></td><td>선거인의 투표 가치가 평등하게 취급되어야 함</td><td>1인 1표, 표의 가치 평등</td></tr>
+<tr><td><b>직접 선거</b></td><td>선거인이 대표자를 직접 선출</td><td>중간 선거인 없이 직접</td></tr>
+<tr><td><b>비밀 선거</b></td><td>선거인이 누구에게 투표했는지 다른 사람이 알 수 없도록 함</td><td>투표 내용 비밀</td></tr>
+</tbody></table>
+<div class="warning"><b>정확한 표현</b><br>보통 선거는 ‘모든 국민이 아무 조건 없이 투표한다’는 뜻이 아니다. 법률이 정한 연령 등 선거권 요건을 충족한 국민에게 부당한 차별 없이 선거권을 보장한다는 뜻이다.</div>
+<h4>③ 유권자의 역할</h4>
+<ul><li>후보자의 공약과 정책을 비교·검토</li><li>후보자의 자질과 활동을 평가</li><li>정당의 정책과 정치적 책임을 살펴봄</li><li>신중하게 투표하고 선거 이후에도 정치에 관심을 가짐</li></ul>
+<h4>④ 정당</h4>
+<div class="definition"><b>정당</b>은 정치적 견해를 같이하는 사람들이 정권 획득과 정책 실현을 위해 조직한 정치 단체이다.</div>
+<ul><li>국민의 다양한 정치적 의견을 수렴·조직</li><li>정책과 공약 개발·제시</li><li>공직 선거 후보자 추천</li><li>정부 구성에 참여하거나 정부를 견제</li><li>국민과 국가 기관 사이에서 정치적 의사를 매개</li></ul>
+<h4>⑤ 선거 이외의 정치 참여</h4>
+<ul><li>청원·민원·의견 제출</li><li>집회와 시위 등 평화적 의사 표현</li><li>정당·시민 단체 활동</li><li>공청회·정책 토론·주민 회의 참여</li><li>언론과 온라인 공간을 통한 의견 표현</li></ul>
+</section>
+<section id="actors">
+<h3>2. 정치 주체와 정치 과정</h3>
+<h4>① 주요 정치 주체</h4>
+<table><thead><tr><th>주체</th><th>주요 역할</th></tr></thead><tbody>
+<tr><td><b>국민</b></td><td>선거·청원·토론·집회 등으로 정치적 의사를 표현하고 정책에 참여</td></tr>
+<tr><td><b>정당</b></td><td>정치적 의견을 조직하고 정권 획득 및 정책 실현을 추구</td></tr>
+<tr><td><b>이익 집단</b></td><td>구성원 또는 특정 집단의 공동 이익을 실현하기 위해 정책 결정에 영향력을 행사</td></tr>
+<tr><td><b>시민 단체</b></td><td>공익 증진과 사회 문제 해결을 위해 감시·제안·캠페인 등을 수행</td></tr>
+<tr><td><b>언론</b></td><td>정치 정보 전달, 여론 형성, 권력과 정책 감시</td></tr>
+<tr><td><b>국가 기관</b></td><td>법과 제도에 따라 정책을 결정·집행하고 공적 업무 수행</td></tr>
+</tbody></table>
+<h4>② 이익 집단과 시민 단체 비교</h4>
+<table><thead><tr><th>구분</th><th>이익 집단</th><th>시민 단체</th></tr></thead><tbody>
+<tr><td>주된 목적</td><td>구성원·특정 집단의 공동 이익</td><td>공익과 공동체의 문제 해결</td></tr>
+<tr><td>활동 예</td><td>정책 건의, 의견 전달, 이해관계 대변</td><td>감시, 캠페인, 공익 정책 제안</td></tr>
+<tr><td>예시</td><td>노동조합, 경제 단체, 직능 단체</td><td>환경·인권·소비자 보호 단체</td></tr>
+</tbody></table>
+<div class="warning"><b>주의:</b> 시민 단체도 특정 정책을 지지하고 구성원의 이해관계를 가질 수 있다. 두 집단의 구분은 개별 행동 하나가 아니라 주된 목적과 활동 방향을 기준으로 이해한다.</div>
+<h4>③ 정치 과정</h4>
+<div class="definition"><b>정치 과정</b>은 사회 구성원의 요구가 정치 체계에 전달되고, 정책으로 결정·집행된 뒤 그 결과가 평가되어 다시 새로운 요구와 정책에 반영되는 과정이다.</div>
+<div class="flow">
+<div class="flow-step">① 사회적 요구와 지지의 표출</div><div class="flow-arrow">↓</div>
+<div class="flow-step">② 요구의 수렴·정책 의제 설정</div><div class="flow-arrow">↓</div>
+<div class="flow-step">③ 정책 결정</div><div class="flow-arrow">↓</div>
+<div class="flow-step">④ 정책 집행</div><div class="flow-arrow">↓</div>
+<div class="flow-step">⑤ 정책 평가와 환류</div>
+</div>
+<ul><li><b>정책 결정:</b> 공공 문제를 해결하기 위한 정책을 선택·확정하는 단계</li><li><b>정책 집행:</b> 결정된 정책을 실제로 실행하는 단계</li><li><b>환류:</b> 정책의 결과와 평가가 새로운 요구나 정책 결정에 다시 반영되는 것</li></ul>
+</section>
+<section id="local">
+<h3>3. 지방 자치와 시민 참여</h3>
+<h4>① 지방 자치의 의미와 필요성</h4>
+<div class="definition"><b>지방 자치</b>는 지역의 일을 지역 주민과 지방 자치 단체가 자율적으로 처리하는 제도이다.</div>
+<ul><li>지역 주민의 의사와 지역 특성을 정책에 반영</li><li>주민의 정치 참여 기회 확대</li><li>지방 행정의 책임성과 민주성 강화</li><li>지역 문제를 지역 상황에 맞게 해결</li></ul>
+<h4>② 지방 자치 단체의 종류</h4>
+<table><thead><tr><th>구분</th><th>종류</th><th>기억할 점</th></tr></thead><tbody>
+<tr><td><b>광역 자치 단체</b></td><td>특별시, 광역시, 특별자치시, 도, 특별자치도</td><td>총 5종류</td></tr>
+<tr><td><b>기초 자치 단체</b></td><td>시, 군, 자치구</td><td>일반 구와 자치구를 구별</td></tr>
+</tbody></table>
+<div class="callout"><b>암기:</b> 광역은 ‘특별시·광역시·특별자치시·도·특별자치도’ 5종류. 기초는 ‘시·군·자치구’ 3종류. 모든 구가 기초 자치 단체인 것은 아니며, 특별시·광역시 안의 자치구와 일반 구를 구별해야 한다.</div>
+<h4>③ 지방 자치 단체의 기관과 역할</h4>
+<table><thead><tr><th>구분</th><th>지방 의회</th><th>지방 자치 단체장</th></tr></thead><tbody>
+<tr><td><b>기관 성격</b></td><td>의결 기관</td><td>집행 기관</td></tr>
+<tr><td><b>주요 역할</b></td><td>조례 제정·개정·폐지, 예산 심의·확정, 결산 승인, 행정 사무 감사·조사 등</td><td>지방 행정 사무 집행, 예산안 편성·제출, 조례안 제출, 소속 직원·기관 지휘·감독 등</td></tr>
+<tr><td><b>핵심</b></td><td>지역의 중요한 사항을 심의·의결하고 집행 기관을 견제</td><td>의회가 의결한 사항과 법령에 따라 지방 행정을 실제로 수행</td></tr>
+</tbody></table>
+<div class="warning"><b>광역·기초 공통점:</b> 광역 자치 단체와 기초 자치 단체 모두 기본적으로 지방 의회(의결 기관)와 지방 자치 단체장(집행 기관)을 둔다. 다만 관할 범위와 담당 사무의 내용은 다르다. ‘광역의 집행기관’과 ‘기초의 집행기관’은 모두 해당 지방 자치 단체의 장이다.</div>
+<h4>④ 주민 참여 제도</h4>
+<table><thead><tr><th>제도</th><th>핵심 내용</th><th>구별 포인트</th></tr></thead><tbody>
+<tr><td><b>주민 투표</b></td><td>지방 자치 단체의 주요 결정 사항 등에 관해 주민이 투표</td><td>지역의 중요한 사항을 주민이 직접 판단</td></tr>
+<tr><td><b>주민 소환</b></td><td>주민이 선출직 지방 공직자의 해임을 요구하고 법정 절차에 따라 투표</td><td>선출직 공직자에 대한 책임 추궁</td></tr>
+<tr><td><b>주민 감사 청구</b></td><td>지방 자치 단체와 그 장의 사무 처리에 대해 법정 요건에 따라 감사를 청구</td><td>행정 사무의 감사를 요구</td></tr>
+<tr><td><b>주민 조례 청구</b></td><td>주민이 조례의 제정·개정·폐지를 지방 의회에 청구</td><td>조례안을 주민이 직접 확정하는 것과는 다름</td></tr>
+<tr><td><b>주민 참여 예산</b></td><td>예산 편성 등 예산 과정에 주민이 의견을 제시하고 참여</td><td>예산 과정에 주민 의견 반영</td></tr>
+</tbody></table>
+<div class="warning"><b>용어 주의:</b> ‘주민 조례 청구’는 주민이 조례의 제정·개정·폐지를 청구하는 제도다. 주민이 청구했다고 곧바로 조례가 확정되는 것은 아니며, 지방 의회의 심의·의결 절차가 이어진다. 주민 감사 청구와 주민 소환도 각각 별도의 법정 요건과 절차가 있다.</div>
+<h4>⑤ 지역 문제 해결을 위한 참여</h4>
+<ul><li>주민 회의·공청회 참여</li><li>지방 의회에 의견 제출</li><li>주민 조례 청구와 주민 참여 예산 활용</li><li>시민 단체·지역 공동체 활동</li><li>지역 현안에 대한 토론과 캠페인 참여</li></ul>
+</section>
+</section>
+
+<section class="unit" id="review">
+<div class="unit-head"><div class="unit-num">Ⅳ</div><div><h2>시험 직전 비교 암기</h2><div class="unit-sub">헷갈리는 개념을 짧고 정확하게 구별하기</div></div></div>
+<table><thead><tr><th>비교 개념</th><th>핵심 구분</th></tr></thead><tbody>
+<tr><td>사회화 / 재사회화</td><td>사회생활에 필요한 것을 학습 / 새로운 환경 등에 적응하기 위해 새롭게 학습</td></tr>
+<tr><td>귀속 지위 / 성취 지위</td><td>개인의 의지와 무관하게 주어짐 / 노력·선택 등을 통해 획득</td></tr>
+<tr><td>지위 / 역할 / 역할 행동</td><td>사회적 위치 / 기대되는 행동 / 실제 수행하는 행동</td></tr>
+<tr><td>편견 / 차별</td><td>치우친 생각·태도 / 부당하게 불리한 대우</td></tr>
+<tr><td>국민 주권 / 국민 자치</td><td>주권의 주인은 국민 / 국민이 정치에 참여해 스스로 다스림</td></tr>
+<tr><td>형식적 평등 / 실질적 평등</td><td>동일한 기준 적용 / 조건과 차이를 고려해 실질적 기회 보장</td></tr>
+<tr><td>입헌주의 / 법치주의</td><td>헌법으로 국가 권력을 제한 / 국가 권력이 법에 근거해 행사</td></tr>
+<tr><td>보통 / 평등 선거</td><td>선거권의 보편성 / 투표 가치의 평등</td></tr>
+<tr><td>직접 / 비밀 선거</td><td>유권자가 대표자를 직접 선출 / 투표 내용을 비밀로 보장</td></tr>
+<tr><td>정당 / 이익 집단</td><td>정권 획득과 정책 실현 추구 / 구성원·특정 집단의 공동 이익 추구</td></tr>
+<tr><td>이익 집단 / 시민 단체</td><td>특정 집단의 이익 / 공익과 사회 문제 해결을 주된 목적으로 활동</td></tr>
+<tr><td>지방 의회 / 지방 자치 단체장</td><td>의결·감사·견제 / 지방 행정 집행</td></tr>
+<tr><td>주민 투표 / 주민 소환</td><td>지역 주요 사항에 대한 주민 투표 / 선출직 지방 공직자 해임 관련 제도</td></tr>
+<tr><td>주민 감사 청구 / 주민 조례 청구</td><td>지방 행정 사무 감사 요구 / 조례 제정·개정·폐지 청구</td></tr>
+</tbody></table>
+</section>
+
+<section class="unit" id="check">
+<div class="unit-head"><div class="unit-num">Ⅴ</div><div><h2>정확도 점검 및 보완 사항</h2><div class="unit-sub">일반 개념의 정확성과 교과서 원문 확인이 필요한 부분</div></div></div>
+<h3>이번 통합본에서 바로잡거나 정교화한 부분</h3>
+<ul>
+<li><b>광역 자치 단체:</b> 특별시·광역시·특별자치시·도·특별자치도, 총 5종류로 정리.</li>
+<li><b>기초 자치 단체:</b> 시·군·자치구로 정리. 일반 구는 기초 자치 단체가 아님.</li>
+<li><b>지방 자치 기관:</b> 지방 의회는 의결 기관, 지방 자치 단체장은 집행 기관으로 구분. 두 종류의 지방 자치 단체에 공통되는 기본 구조임을 명시.</li>
+<li><b>지방 의회 업무:</b> 조례, 예산 외에 결산 승인과 행정 사무 감사·조사도 포함해 표현을 보완.</li>
+<li><b>주민 조례 청구:</b> 주민의 청구와 지방 의회의 최종 의결을 구별.</li>
+<li><b>주민 소환:</b> 해임 여부를 단순히 주민이 임의로 결정하는 것이 아니라 법정 요건과 절차에 따라 진행됨을 보완.</li>
+<li><b>보통 선거:</b> 모든 국민이 아무 조건 없이 투표한다는 식의 부정확한 표현을 피하고 법정 선거권 요건을 반영.</li>
+<li><b>사회화 기관:</b> 1차적·2차적 구분과 공식적·비공식적 구분은 서로 다른 기준임을 명시.</li>
+</ul>
+<h3>교과서 원문을 받아야 확정할 수 있는 부분</h3>
+<ul>
+<li>각 페이지에 실제 수록된 개념·사례·도표가 모두 포함되었는지</li>
+<li>교과서가 사용하는 정확한 정의와 분류 명칭</li>
+<li>교과서에서 별도로 설명하는 정치 참여 제도 및 지방 자치 기관의 세부 권한</li>
+<li>학교 수업에서 강조한 사례와 선생님의 시험 범위</li>
+</ul>
+<div class="notice"><b>정확도 결론</b><br>이 노트는 일반적인 사회 교과 개념과 제도 설명을 기준으로 정리한 예비 학습 자료다. 법률·제도 설명은 개념 수준으로 단순화했으며, 해당 교과서 p.128~143 및 p.164~199 원문 전체와 대조한 것은 아니다. 따라서 ‘교과서 내용 100% 수록’이라고 볼 수는 없다.</div>
+</section>
+
+<section class="unit" id="practice">
+<div class="unit-head"><div class="unit-num">Ⅵ</div><div><h2>확인 문제</h2><div class="unit-sub">핵심 개념을 스스로 점검해 보기</div></div></div>
+<div class="quiz" data-answer="2" data-explain="재사회화는 새로운 환경이나 지위에 적응하기 위해 기존의 지식·기능·생활양식을 새롭게 학습하는 과정입니다.">
+<b>1. 새로운 직장에 적응하기 위해 업무 방식과 조직 문화를 배우는 것은?</b>
+<label><input type="radio" name="q1" value="1"> ① 귀속 지위</label><label><input type="radio" name="q1" value="2"> ② 재사회화</label><label><input type="radio" name="q1" value="3"> ③ 역할 갈등</label>
+<button type="button">정답 확인</button><div class="result"></div>
+</div>
+<div class="quiz" data-answer="1" data-explain="사회적 지위는 사회에서 차지하는 위치이고, 역할은 그 지위에 기대되는 행동입니다.">
+<b>2. 사회적 지위에 있는 사람에게 기대되는 행동 방식은?</b>
+<label><input type="radio" name="q2" value="1"> ① 사회적 역할</label><label><input type="radio" name="q2" value="2"> ② 역할 행동</label><label><input type="radio" name="q2" value="3"> ③ 자아 정체성</label>
+<button type="button">정답 확인</button><div class="result"></div>
+</div>
+<div class="quiz" data-answer="3" data-explain="국가의 주권이 국민에게 있다는 원리는 국민 주권입니다.">
+<b>3. 국가의 주권이 국민에게 있다는 민주주의 원리는?</b>
+<label><input type="radio" name="q3" value="1"> ① 권력 분립</label><label><input type="radio" name="q3" value="2"> ② 국민 자치</label><label><input type="radio" name="q3" value="3"> ③ 국민 주권</label>
+<button type="button">정답 확인</button><div class="result"></div>
+</div>
+<div class="quiz" data-answer="2" data-explain="평등 선거는 모든 유권자의 투표 가치가 동등해야 한다는 원칙입니다.">
+<b>4. 모든 유권자의 투표 가치가 동등해야 한다는 원칙은?</b>
+<label><input type="radio" name="q4" value="1"> ① 보통 선거</label><label><input type="radio" name="q4" value="2"> ② 평등 선거</label><label><input type="radio" name="q4" value="3"> ③ 비밀 선거</label>
+<button type="button">정답 확인</button><div class="result"></div>
+</div>
+<div class="quiz" data-answer="1" data-explain="이익 집단은 구성원이나 특정 집단의 공동 이익을 추구합니다.">
+<b>5. 특정 집단 구성원의 공동 이익을 주된 목적으로 하는 정치 주체는?</b>
+<label><input type="radio" name="q5" value="1"> ① 이익 집단</label><label><input type="radio" name="q5" value="2"> ② 시민 단체</label><label><input type="radio" name="q5" value="3"> ③ 언론</label>
+<button type="button">정답 확인</button><div class="result"></div>
+</div>
+<div class="quiz" data-answer="3" data-explain="우리나라 기초 자치 단체는 시·군·자치구입니다. 일반 구는 기초 자치 단체가 아닙니다.">
+<b>6. 다음 중 기초 자치 단체에 해당하지 않는 것은?</b>
+<label><input type="radio" name="q6" value="1"> ① 군</label><label><input type="radio" name="q6" value="2"> ② 자치구</label><label><input type="radio" name="q6" value="3"> ③ 일반 구</label>
+<button type="button">정답 확인</button><div class="result"></div>
+</div>
+<div class="quiz" data-answer="2" data-explain="지방 자치 단체장은 지방 행정 사무를 집행하는 집행 기관입니다.">
+<b>7. 지방 자치 단체의 집행 기관은?</b>
+<label><input type="radio" name="q7" value="1"> ① 지방 의회</label><label><input type="radio" name="q7" value="2"> ② 지방 자치 단체장</label><label><input type="radio" name="q7" value="3"> ③ 시민 단체</label>
+<button type="button">정답 확인</button><div class="result"></div>
+</div>
+<div class="quiz" data-answer="1" data-explain="주민 조례 청구는 주민이 조례의 제정·개정·폐지를 청구하는 제도이며, 지방 의회의 심의·의결 절차가 이어집니다.">
+<b>8. 주민이 조례의 제정·개정·폐지를 청구하는 제도는?</b>
+<label><input type="radio" name="q8" value="1"> ① 주민 조례 청구</label><label><input type="radio" name="q8" value="2"> ② 주민 소환</label><label><input type="radio" name="q8" value="3"> ③ 주민 감사 청구</label>
+<button type="button">정답 확인</button><div class="result"></div>
+</div>
+</section>
+<div class="footer">사회 시험 대비 통합 필기노트 · 교과서 원문 확인 후 최종 보완 권장</div>
+</main>
+</div>
+<script>
+const themeBtn=document.getElementById('themeBtn');
+themeBtn.addEventListener('click',()=>{document.body.classList.toggle('dark');themeBtn.textContent=document.body.classList.contains('dark')?'☀':'☾';});
+const searchInput=document.getElementById('searchInput');
+const searchable=[...document.querySelectorAll('main h2,main h3,main h4,main p,main li,main td,main .definition,main .mini,main .flow-step,main .callout,main .warning')];
+searchInput.addEventListener('input',()=>{
+  const q=searchInput.value.trim().toLowerCase();
+  document.querySelectorAll('main .unit').forEach(unit=>unit.classList.remove('hidden'));
+  if(!q)return;
+  document.querySelectorAll('main section[id]').forEach(section=>{
+    const text=section.innerText.toLowerCase();
+    section.classList.toggle('hidden',!text.includes(q));
+  });
+  document.querySelectorAll('main .unit').forEach(unit=>{
+    const visible=[...unit.querySelectorAll('section[id]')].some(s=>!s.classList.contains('hidden'));
+    const hasDirectText=unit.querySelector('.unit-head').innerText.toLowerCase().includes(q);
+    unit.classList.toggle('hidden',!visible&&!hasDirectText);
+  });
+});
+document.querySelectorAll('.quiz button').forEach(btn=>btn.addEventListener('click',()=>{
+  const box=btn.closest('.quiz'),chosen=box.querySelector('input:checked'),result=box.querySelector('.result');
+  if(!chosen){result.textContent='답을 먼저 선택하세요.';result.style.color='var(--orange)';return;}
+  const correct=chosen.value===box.dataset.answer;
+  result.textContent=(correct?'정답입니다! ':'아쉽습니다. ') + box.dataset.explain;
+  result.style.color=correct?'var(--green)':'var(--orange)';
+}));
+const links=[...document.querySelectorAll('#toc a')];
+const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+if('IntersectionObserver' in window){
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}
+ }),{rootMargin:'-15% 0px -75% 0px'});
+ sections.forEach(s=>observer.observe(s));
+}
+</script>
+</body>
+</html>
